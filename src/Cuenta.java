@@ -1,6 +1,6 @@
 //entidad Cuenta
-class Cuenta {
-	private double saldo;
+ public abstract class Cuenta {
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
@@ -17,14 +17,7 @@ class Cuenta {
 	}
 	
 	//No retorna valor
-	public void depositar(double saldo){
-		
-		//Esta cuenta || atributo saldo de esta cuenta || 
-		//this account || this account
-		//this object
-		//Al saldo de esta cuenta le vas a aumentar el saldo que ya existe el saldo que esta como parametro
-		this.saldo += saldo;
-	}
+	public abstract void depositar(double saldo);
 	
 	//Retorna valor
 	public boolean retirar(double valor) {
